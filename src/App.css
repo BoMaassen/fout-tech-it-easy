@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 
+/*-----VERKOOP OVERZICHT-----*/
 
-
+.stats-blok {
+    padding: 5px;
+    border-radius: 3px;
+}
 .sold-tv {
     background-color: lightgreen;
-    padding: 5px;
     border:  2px solid green;
-    border-radius: 3px;
 }
 
 .sold-tv p {
@@ -19,11 +21,16 @@
 
 .purchased-tv {
     background-color: lightblue;
-    padding: 5px;
     border:  2px solid blue;
-    border-radius: 3px;
 }
-
 .purchased-tv p {
     color: blue;
+}
+
+.for-sale-tv {
+    background-color: lightpink;
+    border:  2px solid red;
+}
+.for-sale-tv p {
+    color: red;
 }
