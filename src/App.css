@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.sold-tv {
+    background-color: lightgreen;
+    padding: 5px;
+    border:  2px solid green;
+    border-radius: 3px;
+}
+
+.sold-tv p {
+    color: green;
+}
+
+.purchased-tv {
+    background-color: lightblue;
+    padding: 5px;
+    border:  2px solid blue;
+    border-radius: 3px;
+}
+
+.purchased-tv p {
+    color: blue;
+}

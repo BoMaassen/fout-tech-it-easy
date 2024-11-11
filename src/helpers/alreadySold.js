@@ -5,7 +5,9 @@ function alreadySold(){
     for (let i = 0; i < inventory.length ; i ++){
         soldTv = soldTv + inventory[i].sold
     }
-   return console.log(soldTv);
+    /*nog van opdracht 1a*/
+   /*return console.log(soldTv);*/
+    return soldTv;
 }
 
 export default alreadySold;
