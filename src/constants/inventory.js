@@ -328,4 +328,12 @@ export let inventory = [
     },
 ];
 
+// DEEL 2 OPDRACHT 1
+
+// 1a
+const tvType = inventory.map((inventorie) => {
+    return inventorie.type
+});
+
+console.log(tvType);
 
