@@ -337,3 +337,40 @@ const tvType = inventory.map((inventorie) => {
 
 console.log(tvType);
 
+//1b
+const soldOut = inventory.filter((inventorie) => {
+    return inventorie.originalStock - inventorie.sold === 0;
+});
+
+console.log(soldOut);
+
+//1c
+const findTv = inventory.find((inventorie) => {
+    return inventorie.type === "NH3216SMART"
+});
+
+console.log(findTv);
+
+//1d
+const sportTv = inventory.map((inventorie) => {
+   return `name: ${inventorie.brand} ${inventorie.name}, suitable: ${inventorie.refreshRate >= '100'}`
+});
+
+console.log(sportTv);
+
+//1e
+const bigTv = inventory.filter((inventorie) => {
+   return inventorie.availableSizes.some((size) => size >= 65);
+});
+
+console.log(bigTv);
+
+//1f
+const hasAmbilight = inventory.filter((inventorie) => {
+    return inventorie.options.some((checkAmbilight) => {
+        return checkAmbilight.name === "ambiLight" && checkAmbilight.applicable === true
+    });
+});
+
+console.log(hasAmbilight);
+
