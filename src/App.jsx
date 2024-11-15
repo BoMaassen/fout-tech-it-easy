@@ -9,6 +9,7 @@ import sizes from "./helpers/sizes.js";
 import check from './assets/check.png';
 import minus from './assets/minus.png';
 import tv from './assets/tv.png'
+import {inventory} from "./constants/inventory.js";
 
 function App() {
     function youClickedMostSold() {
@@ -22,6 +23,12 @@ function App() {
     function youClickedMostSport() {
         console.log("Meest geschikt voor sport eerst")
     }
+    // deel 2 2a
+    const brandNames = inventory.map((inventorie) => {
+       return inventorie.brand + " "
+    });
+
+    console.log(inventory);
 
     return (
         <>
@@ -32,7 +39,7 @@ function App() {
                 <div className="stats">
                     <div className="sold-tv stats-blok">
                         <p>Aantal verkochte producten</p>
-                        <p>{alreadySold()}</p>
+                        <h2>{alreadySold(inventory)}</h2>
                     </div>
                     <div className="purchased-tv stats-blok">
                         <p>Aantal ingekochte producten</p>
@@ -61,9 +68,18 @@ function App() {
                 </div>
             </section>
             <section>
+                <h2>Alle tvs</h2>
+                <p>{brandNames} </p>
                 <button type="button" onClick={youClickedMostSold}>Meest verkocht eerst</button>
                 <button type="button" onClick={youClickedCheap}>Goedkoopste eerst</button>
                 <button type="button" onClick={youClickedMostSport}>Meest geschikt voor sport eerst</button>
+                <ul>
+                    <h3>{nameTv(bestSellingTv)}</h3>
+                    <p>{priceConverter(bestSellingTv)}</p>
+                    <p>{sizes(bestSellingTv.availableSizes)}</p>
+
+                </ul>
+
             </section>
         </>
     )
